@@ -28,9 +28,8 @@
 <div class="container">
     <div class="d-grid gap-3 my-2">
         <a href="/halrs/formpasien" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4"> Tambah Pasien Dan Lihat Pasien</h3></a>
-        <a href="/halrs/formkontrol" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4"> Tambah Pasien Kontrol Dan Lihat Pasien Kontrol</h3></a>
         <a href="/halrs/haldatapasien" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4"> Lihat Data Data Pasien</h3></a>
-        
+        <a href="/addfaskes" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4"> Tambahkan Faskes</h3></a>
 </div>
 </div>
 

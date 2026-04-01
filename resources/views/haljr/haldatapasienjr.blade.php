@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/bs.min.css">
+<link rel="stylesheet" href="/css/bs.min.css">
 <title>Data Pasien</title>
 <style>
 body{
@@ -226,10 +226,6 @@ function printRow(button){
     <div class="top-bar">
         <a href="/haljr/halJR" class="btn-kembali">← Kembali</a>
     </div>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
 
 </div>
 

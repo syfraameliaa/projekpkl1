@@ -57,13 +57,13 @@ class PasienController extends Controller
         'dokter'=>$request->dokter
     ]);
 
-    return redirect('/halrs.haldatapasien');
+    return redirect('/halrs/haldatapasien');
 }
 
 public function edit()
 {
     $data = Pasien::with('faskes')->get();
 
-    return view('halrs.edithalpasien', compact('data'));
+    return view('halrs/edithalpasien', compact('data'));
 }
 }
