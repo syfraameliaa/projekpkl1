@@ -20,6 +20,8 @@ Route::get('/halrs/formpasien', [PasienController::class, 'create']);
 
 Route::get('/halrs/haldatapasien/{id_faskes}', [PasienController::class, 'index']);
 
+Route::get('/halrs/haldatapasien/{id_faskes}', [PasienController::class, 'index']);
+
 Route::get('/halrs/edithalpasien',[PasienController::class,'edit']);
 
 Route::get('/halrs/wlrs', function () {

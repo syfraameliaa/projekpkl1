@@ -51,7 +51,7 @@ class PasienController extends Controller
             'dokter' => $request->dokter
         ]);
 
-        return redirect('/halrs/haldatapasien');
+        return redirect('/halrs/haldatapasien/' . $request->faskes_id);
     }
 
    public function update(Request $request)
