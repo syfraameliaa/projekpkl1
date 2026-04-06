@@ -19,9 +19,7 @@ $table->string('nama_pasien');
 $table->string('alamat');
 $table->string('tempat_kejadian');
 $table->string('diagnosa');
-
 $table->unsignedBigInteger('faskes_id'); // relasi ke tabel faskes
-
 $table->date('tanggal_keluar');
 $table->integer('biaya');
 $table->string('keterangan');

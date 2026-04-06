@@ -18,7 +18,7 @@ Route::get('/index', function () {
 
 Route::get('/halrs/formpasien', [PasienController::class, 'create']);
 
-Route::get('/halrs/haldatapasien', [PasienController::class, 'index']);
+Route::get('/halrs/haldatapasien/{id_faskes}', [PasienController::class, 'index']);
 
 Route::get('/halrs/edithalpasien',[PasienController::class,'edit']);
 

@@ -81,66 +81,57 @@ input {
 </head>
 
 <body>
-
-<a href="/halrs/haldatapasien" class="btn-kembali">← Kembali</a>
-
-<h2>Data Pasien</h2>
-
-<table id="dataTable">
-
-<thead>
-<tr>
-<th>Nama</th>
-<th>Alamat</th>
-<th>Tanggal Kejadian</th>
-<th>Tempat</th>
-<th>Rumah Sakit</th>
-<th>Tanggal Masuk</th>
-<th>Tanggal Keluar</th>
-<th>Diagnosa</th>
-<th>Biaya</th>
-<th>Tanggal Kontrol</th>
-<th>Kontrol Ke</th>
-<th>Uang Keluar</th>
-<th>Obat</th>
-<th>Sisa Asuransi</th>
-<th>Dokter</th>
-<th>Aksi</th>
-</tr>
-</thead>
-
-<tbody>
-
-@foreach($data as $d)
-
-<tr>
-
-<td>{{ $d->nama_pasien }}</td>
-<td>{{ $d->alamat }}</td>
-<td>{{ $d->tanggal_kejadian }}</td>
-<td>{{ $d->tempat_kejadian }}</td>
-<td>{{ $d->faskes->nama_faskes }}</td>
-<td>{{ $d->tanggal_masuk }}</td>
-<td>{{ $d->tanggal_keluar }}</td>
-<td>{{ $d->diagnosa }}</td>
-<td>{{ $d->biaya }}</td>
-<td>{{ $d->tanggal_kontrol }}</td>
-<td>{{ $d->kontrol_ke }}</td>
-<td>{{ $d->uang_keluar }}</td>
-<td>{{ $d->obat }}</td>
-<td>{{ $d->sisa_asuransi }}</td>
-<td>{{ $d->dokter }}</td>
-
-<td>
-<button class="edit-btn" onclick="editRow(this,{{ $d->id }})">Edit</button>
-</td>
-
-</tr>
-
-@endforeach
-
-</tbody>
-</table>
+    <a href="/halrs/haldatapasien" class="btn-kembali">← Kembali</a>
+    
+    <h2>Data Pasien</h2>
+    
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Tanggal Kejadian</th>
+                <th>Tempat</th>
+                <th>Rumah Sakit</th>
+                <th>Tanggal Masuk</th>
+                <th>Tanggal Keluar</th>
+                <th>Diagnosa</th>
+                <th>Biaya</th>
+                <th>Tanggal Kontrol</th>
+                <th>Kontrol Ke</th>
+                <th>Uang Keluar</th>
+                <th>Obat</th>
+                <th>Sisa Asuransi</th>
+                <th>Dokter</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($data as $d)
+            <tr>
+                <td>{{ $d->nama_pasien }}</td>
+                <td>{{ $d->alamat }}</td>
+                <td>{{ $d->tanggal_kejadian }}</td>
+                <td>{{ $d->tempat_kejadian }}</td>
+                <td>{{ $d->faskes->nama_faskes }}</td>
+                <td>{{ $d->tanggal_masuk }}</td>
+                <td>{{ $d->tanggal_keluar }}</td>
+                <td>{{ $d->diagnosa }}</td>
+                <td>{{ $d->biaya }}</td>
+                <td>{{ $d->tanggal_kontrol }}</td>
+                <td>{{ $d->kontrol_ke }}</td>
+                <td>{{ $d->uang_keluar }}</td>
+                <td>{{ $d->obat }}</td>
+                <td>{{ $d->sisa_asuransi }}</td>
+                <td>{{ $d->dokter }}</td>
+                <td>
+                    <button class="edit-btn" onclick="editRow(this,{{ $d->id }})">Edit</button>
+                </td>
+            </tr>
+            
+            @endforeach
+        </tbody>
+    </table>
 
 
 <div class="form-container" id="editForm">

@@ -272,8 +272,8 @@ function printRow(button){
         <td>{{ $item->sisa_asuransi }}</td>
         <td>{{ $item->dokter }}</td>
         <td>
-            <button class="print-btn" onclick="printRow(this)">Cetak</button>
-        </td> 
+<button class="print-btn" onclick="printRow(this)">Cetak</button>
+</td>
     </tr>
     @endforeach
 </table>

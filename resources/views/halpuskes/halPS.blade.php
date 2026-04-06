@@ -11,15 +11,14 @@
    <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
     <img src="/img/logojr.png" alt="Logo Jasa Raharja" style="width: 75px; height: 50px;">
-    <h4 class="text-light mb-0 ms-3">Selamat Datang</h4>
+    <h4 class="text-light">Selamat Datang</h4>
       </div>
 </nav>
-<!-- tutup nav -->
 
+<!-- tutup nav -->
 <div class="container">
     <div class="d-grid gap-3 my-2">
-        <a href="/halrs/formpasien" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4"> Tambah Pasien Dan Lihat Pasien</h3></a>
-        <a href="/halrs/haldatapasien" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4"> Lihat Data Data Pasien</h3></a>
+        <a href="/haljr/haldatapasienjr" class="btn btn-outline-light" style="width:1000px; height:125px;"><h3 class="my-4">Lihat Data Data Pasien</h3></a>
 </div>
 </div>
 
@@ -52,8 +51,8 @@
             <ul class="list-unstyled small">
               <li class="mb-2"><a href="https://www.instagram.com/jasaraharja_tasikmalaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-light text-decoration-none"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
               <li class="mb-2"><a href="https://www.facebook.com/p/Jasa-Raharja-Tasikmalaya-100066619491973/" target="_blank" class="text-light text-decoration-none"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
-              <li><a href="https://youtube.com/@smkn4tasikmalayamediaoffic704?si=qaFavy6FWr9WJfbz" target="_blank" class="text-light text-decoration-none"><i class="bi bi-youtube me-2"></i>YouTube</a></li>
-              <li><a href="https://youtube.com/@smkn4tasikmalayamediaoffic704?si=qaFavy6FWr9WJfbz" target="_blank" class="text-light text-decoration-none"><i class="bi bi-youtube me-2"></i>Tiktok</a></li>
+              <li><a href="https://www.youtube.com/@OfficialJasaRaharja" target="_blank" class="text-light text-decoration-none"><i class="bi bi-youtube me-2"></i>YouTube</a></li>
+              <li><a href="https://www.tiktok.com/@jr.tasikmlaya?_r=1&_t=ZS-93dWrTftX05" target="_blank" class="text-light text-decoration-none"><i class="bi bi-youtube me-2"></i>Tiktok</a></li>
             </ul>
           </div>
 
@@ -72,7 +71,7 @@
         </div>
 
           <div class="border-top border-secondary pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center small">
-            <p class="mb-2 mb-md-0">&copy; 2026 Syafira Amelia · Semua hak cipta dilindungi.</p>
+            <p class="mb-2 mb-md-0">&copy; 2025 Syafira Amelia · Semua hak cipta dilindungi.</p>
             <div>
             </div>
           </div>

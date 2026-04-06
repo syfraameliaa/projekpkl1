@@ -154,11 +154,10 @@ function printRow(button){
 </div>
 
 <div class="document">
-
-<div class="controls">
+    <div class="controls">
     <a href="/halrs/edithalpasien" class="edit-btn">Edit Semua Data</a>
 </div>
-
+<h2>{{ $datafaskes->nama_faskes }}</h2>
 <h2>LAPORAN DATA PASIEN</h2>
 
 

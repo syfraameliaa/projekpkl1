@@ -8,11 +8,21 @@ use App\Models\Faskes;
 
 class PasienController extends Controller
 {
-    public function index()
-    {
-        $data = Pasien::with('faskes')->get();
-        return view('halrs.haldatapasien', compact('data'));
-    }
+    public function index($id_faskes)
+{
+    $data = Pasien::with('faskes')
+        ->where('faskes_id', $id_faskes)
+        ->get();
+
+       
+
+    $datafaskes = Faskes::find($id_faskes);
+    if(!$datafaskes) {
+        abort(404);
+    };
+
+    return view('halrs.haldatapasien', compact('data', 'datafaskes'));
+}
         
     public function create()
     {
