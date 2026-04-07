@@ -15,6 +15,20 @@
       </div>
 </nav>
 <!-- tutup nav -->
+
+<!-- logout/login/register -->
+ <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+<form id="logout-form" action="{{ route('logout') }}" method="POST">
+  @csrf
+</form>
+<h1>Dashboard Admin</h1>
+@if ($message = Session::get('success'))
+<p>{{ $message }}</p>
+@else
+<p>You are logged in</p>
+@endif
+
+<!-- tutup llr -->
 <div class="wrapper">
     <div class="top-bar">
         <a href="/haljr/halJR" class="btn-kembali">Hal JR</a>
