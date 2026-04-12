@@ -8,21 +8,17 @@ use App\Models\Faskes;
 
 class PasienController extends Controller
 {
-    public function index($id_faskes)
-{
-    $data = Pasien::with('faskes')
-        ->where('faskes_id', $id_faskes)
-        ->get();
+    public function index()
+    {
+        $faskes_id = auth()->user()->faskes_id;
+        $datafaskes = Faskes::find($faskes_id);
+        
+        $data = Pasien::with('faskes')
+            ->where('faskes_id', $faskes_id)
+            ->get();
 
-       
-
-    $datafaskes = Faskes::find($id_faskes);
-    if(!$datafaskes) {
-        abort(404);
-    };
-
-    return view('halrs.haldatapasien', compact('data', 'datafaskes'));
-}
+        return view('halrs.haldatapasien', compact('data', 'datafaskes'));
+    }
         
     public function create()
     {
@@ -32,6 +28,13 @@ class PasienController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_pasien' => 'required',
+            'faskes_id' => 'required',
+            'tanggal_kejadian' => 'required',
+            'tanggal_masuk' => 'required',
+        ]);
+
         Pasien::create([
             'tanggal_masuk' => $request->tanggal_masuk,
             'tanggal_kejadian' => $request->tanggal_kejadian,
@@ -51,7 +54,7 @@ class PasienController extends Controller
             'dokter' => $request->dokter
         ]);
 
-        return redirect('/halrs/haldatapasien/' . $request->faskes_id);
+        return redirect('/halrs/haldatapasien');
     }
 
    public function update(Request $request)
@@ -72,7 +75,10 @@ class PasienController extends Controller
 
 public function edit()
 {
-    $data = Pasien::with('faskes')->get();
+    $faskes_id = auth()->user()->faskes_id;
+    $data = Pasien::with('faskes')
+        ->where('faskes_id', $faskes_id)
+        ->get();
 
     return view('halrs/edithalpasien', compact('data'));
 }

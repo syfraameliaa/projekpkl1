@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'usertype',
+        'faskes_id',
         'password',
     ];
 
@@ -44,5 +45,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function faskes()
+    {
+        return $this->belongsTo(Faskes::class);
     }
 }

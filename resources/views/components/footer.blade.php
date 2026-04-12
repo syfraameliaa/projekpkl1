@@ -1,51 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/bs.min.css">
-    <title>Faskes Tersedia</title>
-</head>
-<body>
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <img src="/img/logojr.png" alt="Logo Jasa Raharja" style="width: 75px; height: 50px;">
-            <h4 class="text-light mb-0 ms-3">Selamat Datang</h4>
-        </div>
-    </nav>
-
-<div class="wrapper">
-    <div class="top-bar">
-        <a href="/halrs/wlrs" class="btn-kembali">← Kembali</a>
-    </div>
-</div>
-
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-            <h3 class="mb-3">Pilih Faskes</h3>
-
-            @if($faskes->isEmpty())
-                <div class="alert alert-warning mb-0">
-                    Data faskes belum ditemukan.
-                </div>
-            @else
-                <div class="list-group">
-                    @foreach($faskes as $item)
-                        <a href="/halrs/haldatapasien/{{ $item->id }}" class="list-group-item list-group-item-action">
-                            {{ $item->jenis == 'rs' ? 'Rumah Sakit' : ($item->jenis == 'puskesmas' ? 'Puskesmas' : $item->jenis) }} - {{ $item->nama_faskes }}
-                        </a>
-                    @endforeach
-                </div>
-            @endif
-        </div>
-    </div>
-</div>
-
 <div>
+    <!-- footer -->
       <footer class="bg-dark text-light pt-5 pb-3 mt-5">
         <div class="container">
           <div class="row">
+            <!-- Alamat -->
              <div class="col-md-3 mb-4">
               <h5 class="fw-bold">Jasa Raharja PT</h5>
               <address class="small">
@@ -54,6 +12,7 @@
                 <a href="https://www.jasaraharja.co.id/" class="text-light d-block">jasaraharja.co.id</a>
               </address>
             </div>
+          <!-- Peta -->
            <div class="col-md-3 mb-4">
             <h5 class="fw-bold">Lokasi</h5>
             <div class="ratio ratio-4x3 rounded overflow-hidden shadow-sm">
@@ -62,6 +21,7 @@
             <a href="https://maps.app.goo.gl/J31oSMuqgnFyHZvy9" target="_blank" rel="noopener" class="d-block mt-2 small text-decoration-underline text-light">Buka di Google Maps</a>
           </div>
 
+          <!-- Media Sosial -->
            <div class="col-md-3 mb-4">
             <h5 class="fw-bold">Media Sosial</h5>
             <ul class="list-unstyled small">
@@ -72,6 +32,8 @@
             </ul>
           </div>
 
+
+          <!-- Link Lainnya -->
           <div class="col-md-3 mb-4">
             <h5 class="fw-bold">Link Lainnya</h5>
             <ul class="list-unstyled small">
@@ -91,7 +53,5 @@
           </div>
         </div>
       </footer>
+      <!-- tutup footer -->
 </div>
-
-</body>
-</html>

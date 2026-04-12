@@ -17,35 +17,52 @@ class LoginRegisterController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:250',
-            'email' => 'required|email|max:250|unique:users',
-            'password' => 'required|min:8|confirmed'
-        ]);
+        // dd($request->validate([
+        //     'name' => 'required|string|max:250',
+        //     'email' => 'required|email|max:250|unique:users',
+        //     'password' => 'required|min:8|confirmed'
+        // ]));
+        // $request->validate([
+        //     'name' => 'required|string|max:250',
+        //     'email' => 'required|email|max:250|unique:users',
+        //     'password' => 'required|min:8|confirmed'
+        // ]);
 
+        
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'usertype' => 'admin'
+            'usertype' => 'puskes',
+            'faskes_id' => 3,
         ]);
 
         $credentials = $request->only('email','password');
         Auth::attempt($credentials);
         $request->session()->regenerate();
 
-        if ($request->user()->usertype == 'admin') {
-            return redirect('admin/dashboard')->withSuccess('You have successfully registered & logged in!');
+        $usertype = Auth::user()->usertype;
+        
+        switch($usertype) {
+            case 'admin':
+                return redirect('admin/dashboard')->withSuccess('Registrasi berhasil!');
+            case 'rs':
+                return redirect('halrs/wlrs')->withSuccess('Registrasi berhasil!');
+            case 'puskes':
+                return redirect('halpuskes/halPS')->withSuccess('Registrasi berhasil!');
+            case 'jr':
+                return redirect('haljr/halJR')->withSuccess('Registrasi berhasil!');
+            default:
+                return redirect('/')->withSuccess('Registrasi berhasil!');
         }
 
-        return redirect()->intended(route('dashboard'));
     }
 
     public function login(){
         return view('auth.login');
     }
 
-    public function authenticate(Request $requset) {
+    public function authenticate(Request $request) {
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required'
@@ -53,8 +70,20 @@ class LoginRegisterController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            if (request->user()->usertype == 'admin') {
-                return redirect('admin/dashboard')->withSuccess('You have successfully logged in!');
+            
+            $usertype = Auth::user()->usertype;
+            
+            switch($usertype) {
+                case 'admin':
+                    return redirect('admin/dashboard')->withSuccess('Login berhasil!');
+                case 'rs':
+                    return redirect('halrs/wlrs')->withSuccess('Login berhasil!');
+                case 'puskes':
+                    return redirect('halpuskes/halPS')->withSuccess('Login berhasil!');
+                case 'jr':
+                    return redirect('haljr/halJR')->withSuccess('Login berhasil!');
+                default:
+                    return redirect('/')->withSuccess('Login berhasil!');
             }
         }
 

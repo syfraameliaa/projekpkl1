@@ -115,7 +115,7 @@ label {
             </div>
 
             <div class="btn-group">
-                <a href="" class="btn btn-secondary">Kembali</a>
+                <a href="/index" class="btn btn-secondary">Kembali</a>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
 

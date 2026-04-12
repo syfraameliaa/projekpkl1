@@ -230,8 +230,10 @@ function printRow(button){
 </div>
 
 <div class="document">
-
-
+    <div class="controls">
+    <a href="/halpuskes/edithalpasien" class="edit-btn">Edit Semua Data</a>
+</div>
+<h2>{{ $datafaskes->nama_faskes }}</h2>
 <h2>LAPORAN DATA PASIEN</h2>
 
 <table border="1">
@@ -251,7 +253,6 @@ function printRow(button){
         <th>Obat</th>
         <th>Sisa Asuransi</th>
         <th>Dokter</th>
-        <th>Aksi</th>
     </tr>
 
     @foreach($data as $item)
@@ -271,9 +272,6 @@ function printRow(button){
         <td>{{ $item->obat }}</td>
         <td>{{ $item->sisa_asuransi }}</td>
         <td>{{ $item->dokter }}</td>
-        <td>
-<button class="print-btn" onclick="printRow(this)">Cetak</button>
-</td>
     </tr>
     @endforeach
 </table>

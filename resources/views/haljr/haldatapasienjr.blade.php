@@ -198,6 +198,7 @@ function enableEdit(){
 }
 
 function printRow(button){
+    console.log(button);
     let row = button.closest("tr").cloneNode(true);
     row.removeChild(row.lastElementChild); // hapus kolom tombol
 
@@ -233,27 +234,32 @@ function printRow(button){
 
 
 <h2>LAPORAN DATA PASIEN</h2>
-
-<table border="1">
-    <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Tanggal Kejadian</th>
-        <th>Tempat</th>
-        <th>Nama Faskes</th>
-        <th>Tanggal Masuk</th>
-        <th>Tanggal Keluar</th>
-        <th>Diagnosa</th>
-        <th>Biaya</th>
-        <th>Tanggal Kontrol</th>
-        <th>Kontrol Ke</th>
-        <th>Uang Keluar</th>
-        <th>Obat</th>
-        <th>Sisa Asuransi</th>
-        <th>Dokter</th>
-        <th>Aksi</th>
-    </tr>
-
+<form class="d-flex" role="search" method="GET" action="/haljr/haldatapasienjr">
+      <input class="form-control me-2" name="search" type="search" placeholder="Cari nama pasien" aria-label="Search" value="{{ request('search') }}"/>
+      <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+<table id="dataTable" border="1">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Tanggal Kejadian</th>
+            <th>Tempat</th>
+            <th>Nama Faskes</th>
+            <th>Tanggal Masuk</th>
+            <th>Tanggal Keluar</th>
+            <th>Diagnosa</th>
+            <th>Biaya</th>
+            <th>Tanggal Kontrol</th>
+            <th>Kontrol Ke</th>
+            <th>Uang Keluar</th>
+            <th>Obat</th>
+            <th>Sisa Asuransi</th>
+            <th>Dokter</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
     @foreach($data as $item)
     <tr>
         <td>{{ $loop->iteration }}</td>
@@ -276,6 +282,7 @@ function printRow(button){
         </td> 
     </tr>
     @endforeach
+    </tbody>
 </table>
 
 </div>
