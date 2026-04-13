@@ -33,8 +33,9 @@ class LoginRegisterController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'usertype' => 'puskes',
-            'faskes_id' => 3,
+            'usertype' => 'rs',
+            'faskes_id' => 4,
+            
         ]);
 
         $credentials = $request->only('email','password');
