@@ -102,7 +102,7 @@
         <div class="card-custom">
             <h2>Login</h2>
 
-            <form action="{{ route('authenticate') }}" method="post">
+            <form action="{{ route('authenticate') }}" method="POST">
                 @csrf
 
                 <div class="mb-3">

@@ -50,16 +50,10 @@
 <input type="date" name="tanggal_keluar">
 
 <label>Jenis Faskes</label>
-<select id="jenis_faskes">
-<option value="">Pilih</option>
-<option value="rs">Rumah Sakit</option>
-<option value="puskesmas">Puskesmas</option>
-</select>
+<input type="text" value="{{ $faskes->jenis ?? '' }}" readonly>
 
 <label>Nama Faskes</label>
-<select name="faskes_id" id="nama_faskes">
-<option value="">Pilih dulu jenis</option>
-</select>
+<input type="text" value="{{ $faskes->nama_faskes ?? '' }}" readonly>
 
 <label>Biaya</label>
 <input type="number" name="biaya">
@@ -71,30 +65,6 @@
 
 </form>
 
-<script>
-
-let semuaFaskes = @json($faskes);
-
-document.getElementById("jenis_faskes").addEventListener("change", function(){
-
-let jenis = this.value;
-let dropdown = document.getElementById("nama_faskes");
-
-dropdown.innerHTML = "<option value=''>Pilih Faskes</option>";
-
-semuaFaskes.forEach(function(f){
-console.log(f);
-if(f.jenis == jenis){
-dropdown.innerHTML += `
-<option value="${f.id}">${f.nama_faskes}</option>
-`;
-}
-
-});
-
-});
-
-</script>
 
 </div>
 </div>

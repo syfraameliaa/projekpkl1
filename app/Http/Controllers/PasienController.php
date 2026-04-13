@@ -22,7 +22,8 @@ class PasienController extends Controller
         
     public function create()
     {
-        $faskes = Faskes::all(); // ambil semua data faskes
+        $faskes_id = auth()->user()->faskes_id;
+        $faskes = Faskes::find($faskes_id);
         return view('halrs.formpasien', compact('faskes'));
     }
 
@@ -30,10 +31,11 @@ class PasienController extends Controller
     {
         $request->validate([
             'nama_pasien' => 'required',
-            'faskes_id' => 'required',
             'tanggal_kejadian' => 'required',
             'tanggal_masuk' => 'required',
         ]);
+
+        $faskes_id = auth()->user()->faskes_id;
 
         Pasien::create([
             'tanggal_masuk' => $request->tanggal_masuk,
@@ -41,7 +43,7 @@ class PasienController extends Controller
             'nama_pasien' => $request->nama_pasien,
             'alamat' => $request->alamat,
             'tempat_kejadian' => $request->tempat_kejadian,
-            'faskes_id' => $request->faskes_id,
+            'faskes_id' => $faskes_id,
             'tanggal_kontrol' => $request->tanggal_kontrol,
             'diagnosa' => $request->diagnosa,
             'tanggal_keluar' => $request->tanggal_keluar,
