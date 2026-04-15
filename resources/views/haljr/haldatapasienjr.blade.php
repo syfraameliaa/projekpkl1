@@ -234,10 +234,18 @@ function printRow(button){
 
 
 <h2>LAPORAN DATA PASIEN</h2>
+<form method="GET" action="/haljr/haldatapasienjr">
+ <select name="faskes_id" onchange="this.form.submit()" class="form-select form-select-sm">
+    <option value="">Pilih Faskes</option>
+    @foreach($faskes as $f)
+        <option value="{{ $f->id }}">{{ $f->nama_faskes }}</option>
+    @endforeach
+</select><br>
+</form>
 <form class="d-flex" role="search" method="GET" action="/haljr/haldatapasienjr">
       <input class="form-control me-2" name="search" type="search" placeholder="Cari nama pasien" aria-label="Search" value="{{ request('search') }}"/>
       <button class="btn btn-outline-primary" type="submit">Search</button>
-    </form>
+    </form><br>
 <table id="dataTable" border="1">
     <thead>
         <tr>

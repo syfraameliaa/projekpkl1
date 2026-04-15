@@ -4,7 +4,7 @@
         <div class="container">
           <div class="row">
             <!-- Alamat -->
-             <div class="col-md-3 mb-4">
+             <div class="col-md-4 mb-4">
               <h5 class="fw-bold">Jasa Raharja PT</h5>
               <address class="small">
                 Jl. Mohamad Hatta No.188a, Sukamanah, Kec. Cipedes, Kab. Tasikmalaya, Jawa Barat 46131<br>
@@ -13,7 +13,7 @@
               </address>
             </div>
           <!-- Peta -->
-           <div class="col-md-3 mb-4">
+           <div class="col-md-4 mb-4">
             <h5 class="fw-bold">Lokasi</h5>
             <div class="ratio ratio-4x3 rounded overflow-hidden shadow-sm">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15829.364632844374!2d108.2163995035028!3d-7.315519028018251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f50acec488d41%3A0xd72d3225cd6f0cbe!2sJasa%20Raharja.%20PT!5e0!3m2!1sid!2sid!4v1770105812795!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -22,7 +22,7 @@
           </div>
 
           <!-- Media Sosial -->
-           <div class="col-md-3 mb-4">
+           <div class="col-md-4 mb-4">
             <h5 class="fw-bold">Media Sosial</h5>
             <ul class="list-unstyled small">
               <li class="mb-2"><a href="https://www.instagram.com/jasaraharja_tasikmalaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-light text-decoration-none"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
@@ -33,7 +33,7 @@
           </div>
 
 
-          <!-- Link Lainnya -->
+          <!-- Link Lainnya
           <div class="col-md-3 mb-4">
             <h5 class="fw-bold">Link Lainnya</h5>
             <ul class="list-unstyled small">
@@ -44,7 +44,7 @@
             </ul>
           </div>
         </div>
-        </div>
+        </div> -->
 
           <div class="border-top border-secondary pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center small">
             <p class="mb-2 mb-md-0">&copy; 2026 Syafira Amelia · Semua hak cipta dilindungi.</p>

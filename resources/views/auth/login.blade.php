@@ -117,9 +117,9 @@
 
                 <button type="submit" class="btn btn-primary text-white">Login</button>
 
-                <div class="link-register">
+                <!-- <div class="link-register">
                     Belum punya akun? <a href="{{ route('register') }}">Daftar</a>
-                </div>
+                </div> -->
             </form>
         </div>
     </div>
